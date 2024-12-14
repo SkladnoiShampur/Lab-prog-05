@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+    const int LIM = 25;
+
+    std::cout << "Пифагоровы тройки (a, b, c), не превышающие " << LIM << ":\n";
+    std::cout << "a\tb\tc\n";
+
+    for (int a = 1; a <= LIM; ++a) {
+        for (int b = a; b <= LIM; ++b) { 
+            int c = 0;
+            do {
+                c++;
+                if (c > LIM) break; 
+            } while (c * c < a * a + b * b); 
+            
+            
+            if (c * c == a * a + b * b && c <= LIM) {
+                std::cout << a << "\t" << b << "\t" << c << "\n";
+            }
+        }
+    }
+
+    return 0;
+}

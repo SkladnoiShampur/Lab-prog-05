@@ -1,0 +1,20 @@
+def c(n):
+    c = 0
+    i = 1  
+
+    while True:
+        if i > n:
+            break  
+        
+         
+        if i % 2 != 0 and i % 3 != 0 and i % 5 != 0:
+            c += 1  
+        
+        i += 1  
+
+    return c
+
+n = int(input("Введите натуральное число n: "))
+result = c(n)
+print(f"Количество натуральных чисел, не превосходящих {n}, и не делящихся на 2, 3 или 5: ")
+print(result)
